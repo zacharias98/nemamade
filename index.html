@@ -284,6 +284,56 @@
             z-index: 10;
         }
 
+        .about-apartment {
+            padding: 120px 60px;
+            background: var(--white);
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .about-header.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-title {
+            font-size: 48px;
+            color: var(--primary-navy);
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            color: var(--text-medium);
+            line-height: 1.8;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .about-content p.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         #features {
             padding-top: 160px;
         }
@@ -369,9 +419,9 @@
         }
 
         .feature-card h3 {
-            font-size: 22px;
+            font-size: 15px;
             color: var(--primary-navy);
-            margin-bottom: 12px;
+            /* margin-bottom: 12px; */
             font-weight: 600;
         }
 
@@ -975,6 +1025,13 @@
             z-index: 2;
         }
 
+        .image-div img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateX(-50%) translateY(0);
@@ -995,7 +1052,7 @@
 
         @media (max-width: 1024px) {
             .features-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .gallery-grid {
@@ -1059,6 +1116,18 @@
                 padding: 60px 15px;
             }
 
+            .about-apartment {
+                padding: 80px 20px;
+            }
+
+            .about-title {
+                font-size: 32px;
+            }
+
+            .about-content p {
+                font-size: 15px;
+            }
+
             .nav-container{
                 justify-content: center;
             }
@@ -1092,7 +1161,7 @@
             }
 
             .features-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .gallery-grid {
@@ -1145,9 +1214,10 @@
                 <img src="assets/nema.png" alt="Nema Made Logo" class="logo">
             </div>
             <ul class="nav-menu">
-                <li><a href="#features">Features</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Amenities</a></li>
                 <li><a href="#location">Location</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact Us</a></li>
                 <li><a href="#pricing" class="nav-cta">Book Now</a></li>
             </ul>
@@ -1160,51 +1230,34 @@
             <h1>Nema Made</h1>
             <p class="hero-description">Experience the perfect blend of luxury and comfort in our stunning 2-bedroom apartment, just minutes from Lygaria Beach in beautiful Crete, Greece.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Reserve Your Stay</a>
-                <a href="#features" class="btn-secondary">Explore Features</a>
+                <a href="#pricing" class="btn-primary">Reserve Your Stay</a>
+                <a href="#about" class="btn-secondary">Explore Nema</a>
             </div>
         </div>
         <div class="scroll-indicator"></div>
     </section>
 
-    <section id="features" class="section">
-        <div class="section-header">
-            <div class="section-label">Amenities</div>
-            <h2 class="section-title">Luxury at Every Turn</h2>
-            <p class="section-description">Discover a carefully curated space designed for your ultimate comfort and relaxation</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-bed"></i></div>
-                <h3>2 Bedrooms</h3>
-                <p>Spacious accommodations with premium bedding and elegant furnishings for up to 4 guests</p>
+    <section id="about" class="about-apartment">
+        <div class="about-container">
+            <div class="about-header">
+                <h2 class="about-title">Your Luxury Crete Apartment Awaits</h2>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-utensils"></i></div>
-                <h3>Gourmet Kitchen</h3>
-                <p>Fully equipped with modern appliances and everything you need to create culinary masterpieces</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-hot-tub-person"></i></div>
-                <h3>Private Jacuzzi</h3>
-                <p>Unwind in your exclusive outdoor jacuzzi while enjoying the Mediterranean atmosphere</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-home"></i></div>
-                <h3>59 m² Space</h3>
-                <p>Thoughtfully designed living areas that blend comfort with sophisticated style</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-water"></i></div>
-                <h3>Beach Access</h3>
-                <p>Only 5 minutes by car to the pristine shores of Lygaria Beach</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-location-dot"></i></div>
-                <h3>Prime Location</h3>
-                <p>Perfectly situated in Made, near both Lygaria and Agia Pelagia beaches</p>
+            <div class="about-content">
+                <p>Nema Made is a modern 2-bedroom luxury apartment in Made, Heraklion, ideal for up to 4 guests. Located just steps from Lygaria Beach and Made Beach, it offers stunning sea views and an excellent base for exploring Crete’s coastline and nearby attractions.</p>
+                
+                <p>The apartment features a fully equipped kitchen, stylish living area, two comfortable bedrooms, and a modern bathroom within 59 sqm of well-designed space. A private heated outdoor jacuzzi with sea views provides the perfect setting to relax and unwind.</p>
+                
+                <p>Set near Agia Pelagia, Nema Made combines easy access to restaurants, beaches, and entertainment with the privacy of a peaceful retreat. Perfect for couples, families, or friends, this luxury stay delivers authentic Cretan hospitality—book early to secure your preferred dates.</p>
             </div>
         </div>
+    </section>
+
+    <section class="section">
+        <!-- add an image -->
+        <div class="image-div">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=600&fit=crop" alt="Apartment View">
+        </div>
+
     </section>
 
     <div class="stats-section">
@@ -1227,6 +1280,69 @@
             </div>
         </div>
     </div>
+
+    <section id="features" class="section">
+        <div class="section-header">
+            <div class="section-label">Amenities</div>
+            <h2 class="section-title">Luxury at Every Turn</h2>
+            <p class="section-description">Discover a carefully curated space designed for your ultimate comfort and relaxation</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-soap"></i></div>
+                <h3>Dish Washer</h3>
+                <!-- <p>Spacious accommodations with premium bedding and elegant furnishings for up to 4 guests</p> -->
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-kitchen-set"></i></div>
+                <h3>Fully Equipped Kitchen</h3>
+                <!-- <p>Fully equipped with modern appliances and everything you need to create culinary masterpieces</p> -->
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-hot-tub-person"></i></div>
+                <h3>Outdoor Heated Jacuzzi</h3>
+                <!-- <p>Unwind in your exclusive outdoor jacuzzi while enjoying the Mediterranean atmosphere</p> -->
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-mountain"></i></div>
+                <h3>Sea View</h3>
+                <!-- <p>Thoughtfully designed living areas that blend comfort with sophisticated style</p> -->
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-water"></i></div>
+                <h3>Hot Water</h3>
+                <!-- <p>Only 5 minutes by car to the pristine shores of Lygaria Beach</p> -->
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shirt"></i></div>
+                <h3>Washing / Drying Machine</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-wind"></i></div>
+                <h3>Air Conditioning</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                <h3>Outdoor dining room</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                <h3>WiFi</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-person-dress"></i></div>
+                <h3>Iron Board</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-coffee"></i></div>
+                <h3>Coffee Facilities</h3>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-car"></i></div>
+                <h3>Free parking</h3>
+            </div>
+        </div>
+    </section>
 
     <section id="gallery" class="gallery">
         <div class="section-header">
@@ -1258,7 +1374,7 @@
         <div class="section-header">
             <div class="section-label">Location</div>
             <h2 class="section-title">Paradise Found</h2>
-            <p class="section-description">Strategically positioned in Made, offering easy access to Crete's most beautiful beaches</p>
+            <p class="section-description">Positioned in Made, offering easy access to Crete's most beautiful beaches</p>
         </div>
         <div class="location-content">
             <div class="location-info">
@@ -1287,7 +1403,7 @@
                     <div class="location-icon-wrapper"><i class="fas fa-plane"></i></div>
                     <div class="location-text">
                         <h4>Easy Access</h4>
-                        <p>Convenient proximity to Heraklion city center and international airport</p>
+                        <p>Convenient proximity to Heraklion city center</p>
                     </div>
                 </div>
             </div>
@@ -1457,7 +1573,7 @@
         }, observerOptions);
 
         // Observe all animatable elements
-        document.querySelectorAll('.section-header, .feature-card, .stat-item, .gallery-item, .location-item, .map-placeholder, .pricing-card, .form-group, .contact-card').forEach(el => {
+        document.querySelectorAll('.section-header, .feature-card, .stat-item, .gallery-item, .location-item, .map-placeholder, .pricing-card, .form-group, .contact-card, .about-header, .about-content p, .image-div img').forEach(el => {
             observer.observe(el);
         });
 
@@ -1484,6 +1600,10 @@
 
         document.querySelectorAll('.contact-card').forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        document.querySelectorAll('.about-content p').forEach((paragraph, index) => {
+            paragraph.style.transitionDelay = `${index * 0.15}s`;
         });
 
         // Counter animation for stat numbers
