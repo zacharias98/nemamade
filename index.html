@@ -22,6 +22,11 @@
             box-sizing: border-box;
         }
 
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         :root {
             --primary-navy: #1a2332;
             --secondary-navy: #2C3E50;
@@ -41,6 +46,9 @@
             line-height: 1.7;
             overflow-x: hidden;
             background: var(--white);
+            width: 100%;
+            max-width: 100%;
+            position: relative;
         }
 
         h1, h2, h3, h4 {
@@ -167,6 +175,9 @@
             color: var(--white);
             position: relative;
             padding: 0 20px;
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100%;
         }
 
         .hero::before {
@@ -957,6 +968,8 @@
             background: var(--primary-navy);
             color: var(--white);
             padding: 80px 60px 40px;
+            box-sizing: border-box;
+            width: 100%;
         }
 
         .footer-content {
@@ -1100,6 +1113,27 @@
 
             .contact {
                 padding: 60px 15px;
+                box-sizing: border-box;
+            }
+
+            .hero {
+                padding: 0 15px;
+                box-sizing: border-box;
+            }
+
+            .nav-container {
+                padding: 15px 10px;
+                box-sizing: border-box;
+            }
+
+            .logo {
+                height: 80px;
+                padding-top: 10px;
+            }
+
+            .section {
+                padding: 60px 15px;
+                box-sizing: border-box;
             }
         }
 
@@ -1130,6 +1164,8 @@
 
             .nav-container{
                 justify-content: center;
+                padding: 20px 15px;
+                box-sizing: border-box;
             }
             
             .nav-menu {
@@ -1137,11 +1173,13 @@
             }
 
             .nav-container {
-                padding: 20px 30px;
+                padding: 20px 15px;
+                box-sizing: border-box;
             }
 
             .section {
                 padding: 80px 20px;
+                box-sizing: border-box;
             }
 
             .hero h1 {
@@ -1158,16 +1196,19 @@
 
             .gallery {
                 padding: 80px 20px;
+                box-sizing: border-box;
             }
 
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
+                padding: 0;
             }
 
             .gallery-grid {
                 grid-template-columns: 1fr;
                 gap: 16px;
                 margin-top: 60px;
+                padding: 0;
             }
 
             .gallery-item {
@@ -1177,6 +1218,8 @@
             .stats-grid {
                 grid-template-columns: 1fr;
                 gap: 40px;
+                padding: 0 20px;
+                box-sizing: border-box;
             }
 
             .form-grid {
@@ -1185,6 +1228,7 @@
 
             .pricing-card {
                 padding: 48px 32px;
+                box-sizing: border-box;
             }
 
             .price {
@@ -1203,6 +1247,13 @@
 
             .contact-cards-grid {
                 grid-template-columns: 1fr;
+                padding: 0;
+            }
+
+            .stats-section {
+                padding: 80px 20px;
+                box-sizing: border-box;
+                margin: 120px 0;
             }
         }
     </style>
